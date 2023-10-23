@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formularz</title>
+</head>
+<body>
+    <form method="POST">
+        <h1>Formularz</h1>
+        {{ form.csrf_token }}
+        <div>
+            {{ form.has_pet.label }}
+            {{ form.has_pet(size=32) }}
+        </div>
+        <div>
+            {{ form.pet_name.label }}
+            {{ form.pet_name(size=32) }}
+        </div>
+        <div>
+            {{ form.like_pet.label }}
+            {{ form.like_pet(size=32) }}
+        </div>
+        <div>
+            {{ form.submit() }}
+        </div>
+    </form>
+</body>
+</html>
